@@ -6,48 +6,45 @@ const AstronomyCard = (props) => {
 
 	const { title, url, hdurl, explanation, date, copyright, media_type } = props.data;
 
-	let nasa = null;
+	function renderContent() {
+		switch(media_type) {
+			case('video'): 
+				return (
+					<iframe 
+						allowFullScreen
+						frameBorder="0"
+		    			height="520"
+		    			width="720"
+		    			src={url}>
+    				</iframe>
+					)
 
-	let media = {media_type};
-	let video = "video";
-	let image = "image";
+			case('image'): 
+				return (
+					<a href={hdurl} className="astronomy-image-wrapper">
+						<img src={url} alt={title} />
+					</a>
+				)
 
-	if (media = video) {
-		nasa = (
-			<div className="astronomy-card">
-			<h6 className="astronomy-title">{title}</h6>
-
-			<a href={hdurl} className="astronomy-image-wrapper">
-				<iframe height="300" width="450" src={url} alt={title} />
-			</a>
-
-			<p>{explanation}</p>
-
-			<span>{date}, {copyright}</span>
-		</div>
-		); 
-
-		console.log("video working "+media);
-	} else if (media = image) {
-		nasa = (
-			<div className="astronomy-card">
-			<h6 className="astronomy-title">{title}</h6>
-
-			<a href={hdurl} className="astronomy-image-wrapper">
-				<img src={url} alt={title} />
-			</a>
-
-			<p>{explanation}</p>
-
-			<span>{date}, {copyright}</span>
-		</div>
-			);
-		console.log("image is working "+media);
-	} else {null}
+			default:
+				return null
+		}
+	}
 
 	return (
 
-		nasa
+			<div className="astronomy-card">
+ 
+	 			<h6 className="astronomy-title">{title}</h6>
+	 
+				{renderContent()}
+	 
+	 			<p>{explanation}</p>
+
+	 			<span> {date}, {copyright}</span>
+
+ 			</div>
+		
 		)
 }
 
