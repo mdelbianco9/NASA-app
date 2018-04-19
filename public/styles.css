@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather);body {
+@import url(https://fonts.googleapis.com/css?family=Gugi);body {
   height: 100vh;
-  background: #eaeaea;
+  background: #B0BEC5;
   color: rgba(0, 0, 0, 0.87);
   font-size: 5rem;
-  font-weight: 900;
-  font-family: "Merriweather", sans-serif;
+  font-weight: 500;
+  font-family: "Gugi", sans-serif;
   padding: 0;
   margin: 0; }
 
@@ -14,7 +14,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #FFF;
+  background-color: #607D8B;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -30,8 +30,9 @@
   .astronomy-card .astronomy-title {
     margin: 25px 0;
     padding: 15px 45px;
-    font-size: 18px;
-    color: #6200ea; }
+    font-size: 25px;
+    font-weight: 200;
+    color: #ECEFF1; }
   .astronomy-card .astronomy-image-wrapper {
     padding: 10px; }
     .astronomy-card .astronomy-image-wrapper img {
@@ -47,11 +48,12 @@
         -webkit-transform: scale(1.07);
         transform: scale(1.07); }
   .astronomy-card p {
-    font-size: 12px;
+    font-size: 15px;
     padding: 10px 50px;
     letter-spacing: 0.66px;
-    line-height: 2; }
+    line-height: 2;
+    color: #ECEFF1; }
   .astronomy-card span {
-    font-size: 10px;
-    color: #311b92;
+    font-size: 12px;
+    color: #FF7043;
     margin: 20px 0; }
